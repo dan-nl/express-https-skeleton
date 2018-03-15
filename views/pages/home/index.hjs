@@ -1,0 +1,5 @@
+{{> html.open }}
+<h1>express https skeleton</h1>
+<p>demonstrate an api call to <a href="http://numbersapi.com/random?json">numbers api</a></p>
+<blockquote>{{ trivia }}</blockquote>
+{{> html.close }}

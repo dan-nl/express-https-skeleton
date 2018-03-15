@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+var app = require( '../app' )
+var config = require( '../config/app' )
+var error = require( 'net-server-events-error' )
+var fs = require( 'fs' )
+var https = require( 'https' )
+var listening = require( 'net-server-events-listening' )
+var normalizePort = require( 'normalize-port' )
+var port = normalizePort( config.port )
+var ip_address = config.ip_address.toString()
+var server
+
+var ssloptions = {
+  cert: fs.readFileSync( config.ssl.crt ),
+  key: fs.readFileSync( config.ssl.key )
+}
+
+app.set( 'port', port )
+
+server = https.createServer( ssloptions, app )
+server.on( 'error', error )
+server.on( 'listening', listening )
+server.listen( port, ip_address )
