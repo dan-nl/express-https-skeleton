@@ -3,7 +3,7 @@
 
 'use strict'
 
-var csurf = require( './csurf/index' )
+var csurf = require( './options/csurf' )
 var express = require( 'express' )
 var router = express.Router()
 var getDirectoryFileList = require( 'get-directory-file-list' )
