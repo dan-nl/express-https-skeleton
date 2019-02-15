@@ -17,14 +17,14 @@
     }
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
+    "eslint": "^5.13.0",
     "eslint-config-dan-nl": "^0.1.5",
     "ghooks": "^2.0.4",
-    "nodemon": "^1.17.5"
+    "nodemon": "^1.18.10"
   },
   "dependencies": {
     "csurf": "^1.9.0",
-    "express": "^4.16.3",
+    "express": "^4.16.4",
     "file-exists": "^5.0.1",
     "generic-request-options": "^1.2.2",
     "get-directory-file-list": "^0.1.2",
@@ -32,9 +32,9 @@
     "http-server-request-handlers-empty-favicon": "^0.1.1",
     "http-server-request-handlers-error-logger": "^0.1.7",
     "http-server-request-handlers-not-found": "^0.1.1",
-    "mongoose": "^4.13.14",
+    "mongoose": "^4.13.18",
     "mongoose-helpers-setup-db": "^0.1.4",
-    "morgan": "^1.9.0",
+    "morgan": "^1.9.1",
     "net-server-events-error": "^0.1.1",
     "net-server-events-listening": "^0.1.2",
     "normalize-port": "^1.0.0",
