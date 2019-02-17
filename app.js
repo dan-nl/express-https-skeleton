@@ -1,9 +1,9 @@
 'use strict'
 
 var express = require( 'express' )
-var errorHandlers = require( './request-handlers/error-handlers' )
-var requestHandlers = require( './request-handlers/index' )
-var routes = require( './router/index' )
+var errorHandlers = require( './request-handlers/available/error-handlers' )
+var requestHandlers = require( './request-handlers' )
+var routes = require( './router' )
 
 var app = express()
 
