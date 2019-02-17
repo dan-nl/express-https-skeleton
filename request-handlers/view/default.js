@@ -17,24 +17,30 @@ var config = require( '../../config/app/index' )
  */
 function defaultContext( req, res, next ) {
   req.context = {
-    body: {
-      scripts: {
-        inline: '',
-        src: []
-      }
-    },
     env: process.env.NODE_ENV,
-    head: {
-      links: {
-        stylesheets: []
+    html: {
+      body: {
+        scripts: {
+          inline: '',
+          src: [
+            { src: 'js/app.js' }
+          ]
+        }
       },
-      meta: {
-        charset: config.charset
+      head: {
+        links: {
+          stylesheets: [
+            { href: 'css/app.css' }
+          ]
+        },
+        meta: {
+          charset: config.charset
+        },
+        style: '',
+        title: config.title
       },
-      style: '',
-      title: config.title
+      lang: config.lang_default
     },
-    lang: config.lang_default,
     partials: {
       'html.body': 'html/body',
       'html.body.scripts': 'html/body/scripts',
