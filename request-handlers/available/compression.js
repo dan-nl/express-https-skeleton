@@ -1,6 +1,6 @@
 'use strict'
 
-var compression = require( 'compression' )
+var compression = require( 'request-handlers/available/compression' )
 
 /**
  * adds

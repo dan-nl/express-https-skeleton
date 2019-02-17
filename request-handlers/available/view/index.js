@@ -13,7 +13,7 @@ var path = require( 'path' )
  * @returns {undefined}
  */
 function requestHandler( app ) {
-  app.set( 'views', path.join( __dirname, '..', '..', 'views' ) )
+  app.set( 'views', path.join( __dirname, '..', '..', '..', 'views' ) )
   app.set( 'view engine', 'hjs' )
   app.use( defaultContext )
   app.use( appContext )

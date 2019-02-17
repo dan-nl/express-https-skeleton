@@ -6,7 +6,7 @@
 var csurf = require( './options/csurf' )
 var express = require( 'express' )
 var router = express.Router()
-var getDirectoryFileList = require( 'get-directory-file-list' )
+var getDirectoryFileListSync = require( 'get-directory-file-list-sync' )
 
 /**
  * @param {Function} app
@@ -20,40 +20,13 @@ function addRoutes( app ) {
     router: router
   }
 
-  getDirectoryFileList( __dirname )
-    .then(
-      /**
-       * process the file list from the router directory
-       * @param {Array} files
-       *
-       * @returns {undefined}
-       */
-      function ( files ) {
-        files.forEach(
-          /**
-           * process each routing file
-           * @param {string} file
-           *
-           * @returns {undefined}
-           */
-          function ( file ) {
-            if ( file !== 'index.js' ) {
-              require( './' + file )( routing_options );
-            }
-          }
-        )
+  getDirectoryFileListSync( __dirname ).forEach(
+    function ( handler ) {
+      if ( handler !== 'index.js' ) {
+        require( './' + handler )( routing_options )
       }
-    )
-    .catch(
-      /**
-       * @param {Error} err
-       *
-       * @returns {undefined}
-       */
-      function ( err ) {
-        console.error( err )
-      }
-    )
+    }
+  )
 
   app.use( router )
   app.use( express.static( 'public' ) )

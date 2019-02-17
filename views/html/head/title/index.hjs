@@ -1,1 +1,1 @@
-<title>{{ head.title }}</title>
+<title>{{{ title }}}</title>

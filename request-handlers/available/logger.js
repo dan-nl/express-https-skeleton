@@ -1,6 +1,6 @@
 'use strict'
 
-var config = require( '../config/app/index' )
+var config = require( '../../config/app' )
 var morgan = require( 'morgan' )
 
 /**

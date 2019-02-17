@@ -5,7 +5,7 @@
 var session = require( 'express-session' )
 
 /**
- * not a simple session handler
+ * a more complex session handler
  *
  * adds
  * `req._parseOriginalUrl`
@@ -20,6 +20,8 @@ var session = require( 'express-session' )
  * @link: https://expressjs.com/en/guide/behind-proxies.html
  * @link https://blog.pablobm.com/post/168396226345/keep-it-simple-express-session-vs-cookie-session
  * @link https://stackoverflow.com/questions/23566555/whats-difference-with-express-session-and-cookie-session#answer-23566934
+ *
+ * note, only use one of the following: cookie-parser, cookie-session, or session
  *
  * @param {Function} app
  * @param {Function} app.use

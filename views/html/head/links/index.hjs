@@ -1,1 +1,2 @@
-{{# stylesheets }}{{> html.head.links.stylesheets }}{{/ stylesheets }}
+{{#stylesheets}}{{> html.head.links.stylesheets }}{{/stylesheets}}
+

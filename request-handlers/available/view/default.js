@@ -2,7 +2,7 @@
 
 'use strict'
 
-var config = require( '../../config/app/index' )
+var config = require( '../../../config/app' )
 
 /**
  * @param {IncomingMessage} req

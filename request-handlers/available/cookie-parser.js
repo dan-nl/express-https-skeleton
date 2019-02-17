@@ -1,6 +1,6 @@
 'use strict'
 
-var cookieParser = require( 'cookie-parser' )
+var cookieParser = require( 'request-handlers/available/cookie-parser' )
 
 /**
  * adds
@@ -9,6 +9,8 @@ var cookieParser = require( 'cookie-parser' )
  * `req.signedCookies`
  *
  * @link https://www.npmjs.com/package/cookie-parser
+ *
+ * note, only use one of the following: cookie-parser, cookie-session, or session
  *
  * @param {Function} app
  * @param {Function} app.use

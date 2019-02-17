@@ -1,15 +1,8 @@
-'use strict';
+/* eslint global-require: off */
 
-// var bodyParser = require( './body-parser' )
-// var compression = require( './compression' )
-// var cookieParser = require( './cookie-parser' )
-// var cookieSession = require( './cookie-session' )
-var emptyFavicon = require( './empty-favicon' )
-var logger = require( './logger' )
-// var passport = require( './passport' )
-// var sass = require( './sass' )
-// var session = require( './session' )
-var view = require( './view/index' )
+'use strict'
+
+var getDirectoryFileListSync = require( 'get-directory-file-list-sync' )
 
 /**
  * @link http://expressjs.com/en/api.html#app.use
@@ -20,20 +13,13 @@ var view = require( './view/index' )
  * @returns {undefined}
  */
 function requestHandlers( app ) {
-  logger( app )
-  // bodyParser( app )
-
-  // use only one of these
-  // cookieParser( app )
-  // cookieSession( app ) // use for simple session handling
-  // session( app ) // use for more complex, robust session handling
-
-  // passport( app )
-
-  // sass( app )
-  // compression( app )
-  emptyFavicon( app )
-  view( app )
+  getDirectoryFileListSync( __dirname ).forEach(
+    function ( handler ) {
+      if ( handler !== 'index.js' ) {
+        require( './' + handler )( app )
+      }
+    }
+  )
 }
 
 module.exports = requestHandlers

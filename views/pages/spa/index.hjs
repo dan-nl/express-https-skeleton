@@ -1,0 +1,4 @@
+{{> html.open }}
+<h1>{{ html.head.title }}</h1>
+<div id="app"></div>
+{{> html.close }}
