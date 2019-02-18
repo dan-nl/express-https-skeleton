@@ -39,7 +39,7 @@
     "express": "^4.16.4",
     "file-exists": "^5.0.1",
     "generic-request-options": "^1.2.2",
-    "get-directory-file-list-sync": "^0.1.0",
+    "get-directory-file-list-sync": "^0.1.1",
     "hjs": "^0.0.6",
     "http-server-request-handlers-empty-favicon": "^0.1.1",
     "http-server-request-handlers-error-logger": "^0.1.7",
