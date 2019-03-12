@@ -1,2 +1,2 @@
-{{#inline}}{{> html.body.scripts.inline }}{{/inline}}
-{{#src}}{{> html.body.scripts.src }}{{/src}}
+{{# inline }}{{> html.body.scripts.inline }}{{/ inline }}
+{{# srcs }}{{> html.body.scripts.srcs }}{{/ srcs }}

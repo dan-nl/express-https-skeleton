@@ -12,7 +12,8 @@ var getNumbersTrivia = require( '../../helpers/get-numbers-trivia' )
  * @returns {undefined}
  */
 function get( req, res ) {
-  req.context.head = { title: 'express http skeleton' }
+  req.context.html.body.scripts.srcs.push({ src: 'js/app.js' })
+  req.context.html.head.links.stylesheets.push({ href: 'css/app.css' })
 
   // demonstrates how one might make a call to an external service
   getNumbersTrivia()

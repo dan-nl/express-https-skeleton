@@ -22,16 +22,12 @@ function defaultContext( req, res, next ) {
       body: {
         scripts: {
           inline: '',
-          src: [
-            { src: 'js/app.js' }
-          ]
+          srcs: []
         }
       },
       head: {
         links: {
-          stylesheets: [
-            { href: 'css/app.css' }
-          ]
+          stylesheets: []
         },
         meta: {
           charset: config.charset
@@ -45,7 +41,7 @@ function defaultContext( req, res, next ) {
       'html.body': 'html/body',
       'html.body.scripts': 'html/body/scripts',
       'html.body.scripts.inline': 'html/body/scripts/inline',
-      'html.body.scripts.src': 'html/body/scripts/src',
+      'html.body.scripts.srcs': 'html/body/scripts/srcs',
       'html.close': 'html/close',
       'html.head': 'html/head',
       'html.head.links': 'html/head/links',

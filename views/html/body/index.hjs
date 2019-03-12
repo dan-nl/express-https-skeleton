@@ -1,1 +1,1 @@
-<body{{# body.id }} id="{{ body.id }}"{{/ body.id }}{{# body.class }} class="{{ body.class }}"{{/ body.class }}>
+<body{{# id }} id="{{ id }}"{{/ id }}{{# class }} class="{{ class }}"{{/ class }}>

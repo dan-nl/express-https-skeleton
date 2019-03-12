@@ -1,4 +1,4 @@
 <!doctype html>
 <html lang="{{ html.lang }}">
 {{# html.head }}{{> html.head }}{{/ html.head }}
-{{> html.body }}
+{{# html.body }}{{> html.body }}{{/ html.body }}
