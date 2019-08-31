@@ -3,7 +3,7 @@
 'use strict'
 
 var config = require( '../../config/cookie' )
-var cookieSession = require( 'request-handlers/available/cookie-session' )
+var cookieSession = require( 'cookie-session' )
 
 /**
  * a simple session handler

@@ -1,6 +1,6 @@
 'use strict'
 
-var bodyParser = require( 'request-handlers/available/body-parser' )
+var bodyParser = require( 'body-parser' )
 
 /**
  * adds

@@ -1,6 +1,6 @@
 'use strict'
 
-var passport = require( 'request-handlers/available/passport' )
+var passport = require( 'passport' )
 
 /**
  * adds

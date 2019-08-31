@@ -1,6 +1,6 @@
 'use strict'
 
-var cookieParser = require( 'request-handlers/available/cookie-parser' )
+var cookieParser = require( 'cookie-parser' )
 
 /**
  * adds
