@@ -1,6 +1,6 @@
 {
   "name": "express-https-skeleton",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "a skeleton https express server",
   "author": "dan entous",
   "license": "MIT",
